@@ -1,8 +1,9 @@
 {% extends "blog_app/base.html" %}
 
 {% block header %}
-<div class="jumbotron">
-    <h3>Welcome</h3>
+<div class="text-center lead">
+   <div><p>It’s not a bug – it’s an undocumented feature. </p></div>
+    <div>- Anonymous -</div>
 </div>
 {% endblock header %}
 
@@ -11,7 +12,7 @@
 <div class="panel panel-default">
     <div class="panel-heading">
         <h4>
-            <a href="{% url 'blog_app:view_post' post.id %}">{{post.title}}</a>
+            <a href="#" id="viewPost">{{post.title}}</a>
             <input type="hidden" id="postID" value="{{post.id}}"/>
             </small>
             <small class="pull-right" style="color: black">{{post.date_added|date:'M d, Y H:i'}}</small>

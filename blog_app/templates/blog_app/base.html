@@ -1,5 +1,3 @@
-{% load bootstrap3 %}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,27 +5,32 @@
     <meta http-equiv="X-UA-COMPATIBLE" content="IE=ednge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Blog</title>
-
+    {% load bootstrap3 %}
     {% bootstrap_css %}
     {% bootstrap_javascript %}
     {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/site.css' %}">
 </head>
 <body>
-<nav class="navbar navbar-default navbar-static-top">
+<nav class="navbar navbar-default navbar-fixed-top lead">
     <div class="container">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="{% url 'blog_app:index' %}">Main</a>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a class="navbar-brand" href="{% url 'blog_app:index' %}">Main</a></li>
+            </ul>
         </div>
     </div>
 </nav>
 <div class="container">
-    <div class="page-header">
-        {% block header %}
-        {% endblock header %}
-    </div>
-    <div>
-        {% block content %}
-        {% endblock content%}
+    <div id="pageContent">
+        <div class="page-header">
+            {% block header %}
+            {% endblock header %}
+        </div>
+        <div>
+            {% block content %}
+            {% endblock content%}
+        </div>
     </div>
 </div>
 <script type="text/javascript" src="{% static 'scripts/blog.js' %}"></script>
