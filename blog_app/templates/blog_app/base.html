@@ -1,0 +1,35 @@
+{% load bootstrap3 %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=ednge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blog</title>
+
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    {% load static %}
+</head>
+<body>
+<nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="{% url 'blog_app:index' %}">Main</a>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <div class="page-header">
+        {% block header %}
+        {% endblock header %}
+    </div>
+    <div>
+        {% block content %}
+        {% endblock content%}
+    </div>
+</div>
+<script type="text/javascript" src="{% static 'scripts/blog.js' %}"></script>
+</body>
+</html>

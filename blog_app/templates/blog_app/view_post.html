@@ -1,0 +1,12 @@
+{% extends "blog_app/base.html" %}
+{% load bootstrap3 %}
+
+{% block header%}
+<h3>{{blog_post.title}}</h3>
+{% endblock header%}
+
+{% block content %}
+<div>
+    {{blog_post.text|safe}}
+</div>
+{% endblock content %}
