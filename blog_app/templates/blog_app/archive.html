@@ -1,0 +1,13 @@
+{% for yearNode in archive_tree %}
+{{ yearNode.tag }}
+{% for monthNode in yearNode.children %}
+{{ monthNode.tag }}
+{% for post in monthNode.children %}
+
+{{ post.title }} <br />
+
+{% endfor %}
+
+{% endfor %}
+
+{% endfor %}

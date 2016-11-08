@@ -1,0 +1,15 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h5>Latest Posts</h5>
+    </div>
+    <ul class="list-group">
+        {% for l_post in l_posts %}
+
+        <li class="list-group-item"><a href="{% url 'blog_app:view_post' l_post.id %}">{{ forloop.counter }}. {{l_post.title}}</a></li>
+        {% empty %}
+        <li>
+            No posts yet :(
+        </li>
+        {% endfor %}
+    </ul>
+</div>

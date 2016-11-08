@@ -2,7 +2,7 @@
 
 {% block header %}
 <div class="text-center lead">
-   <div><p>It’s not a bug – it’s an undocumented feature. </p></div>
+    <div><p>It’s not a bug – it’s an undocumented feature. </p></div>
     <div>- Anonymous -</div>
 </div>
 {% endblock header %}
@@ -12,7 +12,7 @@
 <div class="panel panel-default">
     <div class="panel-heading">
         <h4>
-            <a href="#" id="viewPost">{{post.title}}</a>
+            <a href="{% url 'blog_app:view_post' post.id %}" class="viewPost">{{post.title}}</a>
             <input type="hidden" id="postID" value="{{post.id}}"/>
             </small>
             <small class="pull-right" style="color: black">{{post.date_added|date:'M d, Y H:i'}}</small>

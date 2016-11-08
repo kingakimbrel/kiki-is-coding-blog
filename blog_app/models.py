@@ -22,3 +22,11 @@ class Comment(models.Model):
     def __str__(self):
         """Return a string representation of the model"""
         return self.text[:50] + "..."
+
+
+class ArchiveNode:
+    """A class representing Node of Archive view."""
+
+    def __init__(self):
+        self.tag = ""
+        self.children = []

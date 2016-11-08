@@ -1,9 +1,13 @@
+{% extends "blog_app/base.html" %}
+
 {% block header%}
 <h3>{{blog_post.title}}</h3>
 {% endblock header%}
 
-{% block content %}
-<div>
-    {{blog_post.text|safe}}
+<div class="panel panel-default">
+    {% block content %}
+    <div class="panel-body">
+        {{blog_post.text|safe}}
+    </div>
+    {% endblock content %}
 </div>
-{% endblock content %}

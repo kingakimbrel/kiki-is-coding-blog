@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'styles/site.css' %}">
 </head>
 <body>
-<nav class="navbar navbar-default navbar-fixed-top lead">
+<nav class="navbar navbar-inverse navbar-fixed-top lead">
     <div class="container">
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
@@ -22,17 +22,37 @@
     </div>
 </nav>
 <div class="container">
-    <div id="pageContent">
-        <div class="page-header">
-            {% block header %}
-            {% endblock header %}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="page-header">
+                {% block header %}
+                {% endblock header %}
+            </div>
         </div>
-        <div>
-            {% block content %}
-            {% endblock content%}
+    </div>
+
+    <div class="row">
+        <div class="col-md-9">
+            <div id="pageContent">
+                <div>
+                    {% block content %}
+                    {% endblock content%}
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div id="latestPosts"></div>
+
+            <div id="archiveTree"></div>
         </div>
     </div>
 </div>
+<footer>
+    <div class="container">
+        <hr/>
+        <p class="text-center">Copyright © KiKi 2016. All rights reserved.</p>
+    </div>
+</footer>
 <script type="text/javascript" src="{% static 'scripts/blog.js' %}"></script>
 </body>
 </html>
