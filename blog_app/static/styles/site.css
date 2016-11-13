@@ -2,5 +2,37 @@ body {
     margin-top: 60px;
 }
 
-.viewPost{
+.chevron-toggle {}
+
+.list-padding {
+    padding: 5px;
+}
+
+.list-group.list-group-root {
+    padding: 0px;
+    overflow: hidden;
+    border-width: 0px;
+}
+
+.list-group.list-group-root > .list-group-item {
+    margin-bottom: 0px;
+    border-width: 0px;
+}
+
+.list-group.list-group-root > .list-group > .list-group-item {
+    border-width: 0px;
+    padding-left: 30px;
+}
+
+.list-group.list-group-root > .list-group > .list-group > .list-group-item {
+    border-width: 0px;
+    padding-left: 55px;
+}
+
+.list-group.list-group-root.well, .list-group{
+    margin-bottom: 0px;
+}
+
+.list-group-item .glyphicon {
+    margin-right: 5px;
 }

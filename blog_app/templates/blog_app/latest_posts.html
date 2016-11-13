@@ -7,7 +7,7 @@
 
         <li class="list-group-item"><a href="{% url 'blog_app:view_post' l_post.id %}">{{ forloop.counter }}. {{l_post.title}}</a></li>
         {% empty %}
-        <li>
+        <li class="list-group-item">
             No posts yet :(
         </li>
         {% endfor %}

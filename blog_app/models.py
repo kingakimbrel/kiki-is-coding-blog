@@ -24,9 +24,18 @@ class Comment(models.Model):
         return self.text[:50] + "..."
 
 
-class ArchiveNode:
-    """A class representing Node of Archive view."""
+class ArchiveYearNode:
+    """A class representing a year node of Archive view."""
 
     def __init__(self):
-        self.tag = ""
-        self.children = []
+        self.year = 0
+        self.months = []
+
+
+class ArchiveMonthNode:
+    """A class representing a month node of Archive view."""
+
+    def __init__(self):
+        self.month = ""
+        self.month_num = 0
+        self.count = 0
