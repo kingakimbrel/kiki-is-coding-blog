@@ -5,6 +5,9 @@ from blog_app.models import Post, ArchiveMonthNode, ArchiveYearNode
 
 
 def get_archive():
+    """Builds the year/month based archive tree."""
+    archive = []
+
     with connection.cursor() as cursor:
         cursor.execute('SELECT strftime(\'%Y\', date_added) AS YEAR, '
                        'strftime(\'%m\', date_added) AS MONTH, '
@@ -12,8 +15,6 @@ def get_archive():
                        'FROM blog_app_post '
                        'GROUP BY YEAR, MONTH '
                        'Order by YEAR DESC, MONTH')
-
-        archive = []
 
         years = set()
         year_node = ArchiveYearNode()
@@ -34,9 +35,10 @@ def get_archive():
 
             year_node.months.append(month_node)
 
-        return archive
+    return archive
 
 
 def get_latest_post():
+    """Gets few latest posts."""
     last5posts = Post.objects.defer("text").order_by('-date_added')[:5]
     return last5posts

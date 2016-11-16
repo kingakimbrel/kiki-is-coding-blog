@@ -10,14 +10,15 @@
             </a>
             <div class="list-group collapse" id="item-{{yearNode.year}}">
                 {% for monthNode in yearNode.months %}
-                <a href="#item-{{yearNode.year}}-{{monthNode.month}}" class="list-group-item chevron-toggle"
+                <a href="#item-{{yearNode.year}}-{{monthNode.month_num}}"
+                   class="list-group-item chevron-toggle archive-item"
                    data-toggle="collapse">
                     <i class="glyphicon glyphicon-chevron-right"></i>{{ monthNode.month }} ({{ monthNode.count }})
+                    <input type="hidden" class="h-year" value="{{yearNode.year}}">
+                    <input type="hidden" class="h-month" value="{{monthNode.month_num}}">
                 </a>
-                <div class="list-group collapse" id="item-{{yearNode.year}}-{{monthNode.month}}">
-                    <a href="#" class="list-group-item">Item 1.1.1</a>
-                    <a href="#" class="list-group-item">Item 1.1.2</a>
-                    <a href="#" class="list-group-item">Item 1.1.3</a>
+                <div class="list-group collapse" id="item-{{yearNode.year}}-{{monthNode.month_num}}">
+                    <a class="list-group-item"><i class="fa fa-spinner fa-spin" style="font-size:22px"></i></a>
                 </div>
                 {% endfor %}
             </div>

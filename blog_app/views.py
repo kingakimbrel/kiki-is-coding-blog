@@ -14,6 +14,15 @@ def index(request):
 
 
 def view_post(request, post_id):
+    """View selected post."""
     blog_post = Post.objects.get(id=post_id)
-    context = {'blog_post': blog_post}
+    last_posts = get_latest_post()
+    archive = get_archive()
+    context = {'blog_post': blog_post, 'l_posts': last_posts, 'archive_tree': archive}
     return render(request, 'blog_app/view_post.html', context)
+
+
+def get_posts(request, year, month):
+    t_posts = Post.objects.filter(date_added__year=year, date_added__month=month)
+    context = {'t_posts': t_posts}
+    return render(request, 'blog_app/archive_posts.html', context)
