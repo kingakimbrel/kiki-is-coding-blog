@@ -42,3 +42,17 @@ body {
 .list-group-item .glyphicon {
     margin-right: 5px;
 }
+
+.comment-section {
+    padding-left:40px;
+}
+
+.has-error { }
+
+label.has-error {
+    color: red;
+}
+
+input.has-error, textarea.has-error  {
+    border:1px solid red;
+}

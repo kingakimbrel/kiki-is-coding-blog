@@ -1,0 +1,15 @@
+<div>
+    {% for comment in comments %}
+    <div class="media">
+        <div class="media-body">
+            <h4 class="media-heading">
+                {{comment.author}}
+                <small><span class="glyphicon glyphicon-time" aria-hidden="true"></span> {{comment.date_added|date:'M d, Y H:i'}}</small>
+            </h4>
+            {{comment.text | linebreaks}}
+        </div>
+    </div>
+    {% empty %}
+    <h5>Be first to comment</h5>
+    {% endfor %}
+</div>

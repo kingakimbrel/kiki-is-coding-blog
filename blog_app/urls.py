@@ -13,4 +13,5 @@ urlpatterns = [
     url(r'^get_latest_post/$', views.get_latest_post, name='get_latest_post'),
     url(r'^get_archive/$', views.get_archive, name='get_archive'),
     url(r'^get_posts/(?P<year>\d+)/(?P<month>\d+)/$', views.get_posts, name='get_posts'),
+    url(r'^add_new_comment/$', views.add_new_comment, name='add_new_comment'),
 ]

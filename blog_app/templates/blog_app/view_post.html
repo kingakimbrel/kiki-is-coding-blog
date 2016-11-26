@@ -2,12 +2,33 @@
 
 {% block header%}
 <h3>{{blog_post.title}}</h3>
+<small><span class="glyphicon glyphicon-time" aria-hidden="true"></span> {{blog_post.date_added|date:'M d, Y H:i'}}</small>
+
 {% endblock header%}
 
+{% block content %}
 <div class="panel panel-default">
-    {% block content %}
     <div class="panel-body">
         {{blog_post.text|safe}}
     </div>
-    {% endblock content %}
 </div>
+<hr/>
+<h4>Comments:</h4>
+<hr/>
+<div id="commentsDiv" class="comment-section">
+    {% include "blog_app/comments.html" %}
+    <hr/>
+    <div class="well">
+        <h4>Leave a comment:</h4>
+        <form id="newComment" method="post" class="form">
+            <div class="form-group">
+                <input type="hidden" name="blog_post_id" value="{{blog_post.id}}"/>
+                <input class="form-control" type="text" name="author" placeholder="Author"/>
+                <textarea class="form-control" rows="5" name=text placeholder="Type your comment here..."></textarea>
+            </div>
+            <button id="submitComment" type="submit" class="btn btn-primary">Submit</button>
+            {% csrf_token %}
+        </form>
+    </div>
+</div>
+{% endblock content %}

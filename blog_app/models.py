@@ -14,7 +14,7 @@ class Post(models.Model):
 
 class Comment(models.Model):
     """Comments related to specific post."""
-    post = models.ForeignKey(Post)
+    post = models.ForeignKey(Post, related_name='comments')
     date_added = models.DateTimeField(auto_now_add=True)
     author = models.CharField(max_length=200)
     text = models.TextField()

@@ -14,13 +14,49 @@ $(document).ready(function () {
         var elem = $(this);
 
         $.ajax({
-                url: url,
-                type: 'GET',
-                success: function (data) {
-                    $(itemId).html(data);
-                    elem.removeClass('archive-item').off('click');
+            url: url,
+            type: 'GET',
+            success: function (data) {
+                $(itemId).html(data);
+                elem.removeClass('archive-item').off('click');
+            },
+        });
+    });
+
+    $('#submitComment').click(function (event) {
+        var form = $("#newComment");
+        form.validate({
+            rules: {
+                author: {
+                    required: true
                 },
-            });
+                text: {
+                    required: true
+                }
+            },
+            messages:{
+                author: {
+                    required: '*Author is required'
+                },
+                text: {
+                    required: '*Comment is required'
+                }
+            },
+            errorClass: "has-error",
+        });
+        if (!form.valid()) {
+            return;
+        }
+        event.preventDefault();
+        $.ajax({
+            url: "/add_new_comment/",
+            type: 'POST',
+            data: $('form#newComment').serialize(),
+            success: function (data) {
+                $("#commentsDiv").html(data);
+            },
+            error: function (data) {}
+        });
     });
 
 });

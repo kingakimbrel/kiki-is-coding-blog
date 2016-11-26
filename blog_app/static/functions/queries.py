@@ -3,7 +3,6 @@ import calendar
 
 from blog_app.models import Post, ArchiveMonthNode, ArchiveYearNode
 
-
 def get_archive():
     """Builds the year/month based archive tree."""
     archive = []
