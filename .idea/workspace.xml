@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7a41530-e0c7-4695-bc72-7ee324dbc0df" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog_app/static/scripts/blog.js" afterPath="$PROJECT_DIR$/blog_app/static/scripts/blog.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="" />
     </list>
     <ignored path="blog_django.iws" />
     <ignored path=".idea/workspace.xml" />
