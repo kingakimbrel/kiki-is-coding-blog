@@ -55,7 +55,9 @@ $(document).ready(function () {
             success: function (data) {
                 $("#commentsDiv").html(data);
             },
-            error: function (data) {}
+            error: function (data) {
+              alert("Ooops... We have a problem. Please refresh the page.");  
+            },
         });
     });
 

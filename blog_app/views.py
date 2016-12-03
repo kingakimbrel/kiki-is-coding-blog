@@ -1,13 +1,11 @@
 from django.db.models import Count
 from django.http import HttpResponse
-from django.http import HttpResponseRedirect
 from django.shortcuts import render
-from django.core.urlresolvers import reverse
 from django.template.loader import render_to_string
 
 from blog_app.forms import CommentForm
-from .models import Post,Comment
 from blog_app.static.functions.queries import *
+from .models import Comment
 
 
 def index(request):
@@ -37,7 +35,6 @@ def get_posts(request, year, month):
 
 
 def add_new_comment(request):
-    data={}
     if request.method == 'POST':
         form = CommentForm(request.POST)
         if form.is_valid():
@@ -50,4 +47,8 @@ def add_new_comment(request):
             html = render_to_string('blog_app/comments.html', {'comments': comments})
             return HttpResponse(html)
 
-    return HttpResponseRedirect(reverse('blog_app:index'))
+    return HttpResponse(
+        content="",
+        content_type="application/json",
+        status=400
+    )
