@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7a41530-e0c7-4695-bc72-7ee324dbc0df" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog_django/settings.py" afterPath="$PROJECT_DIR$/blog_django/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog_app/static/functions/queries.py" afterPath="$PROJECT_DIR$/blog_app/static/functions/queries.py" />
     </list>
     <ignored path="blog_django.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,11 +34,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="queries.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="queries.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/blog_app/static/functions/queries.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="39" column="4" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
+            <state relative-caret-position="150">
+              <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -46,7 +46,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blog_django/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="156">
@@ -163,13 +163,13 @@
         <option value="$PROJECT_DIR$/blog_app/templates/blog_app/base.html" />
         <option value="$PROJECT_DIR$/blog_app/templates/blog_app/comments.html" />
         <option value="$PROJECT_DIR$/blog_app/models.py" />
-        <option value="$PROJECT_DIR$/blog_app/static/functions/queries.py" />
         <option value="$PROJECT_DIR$/blog_app/templates/blog_app/view_post.html" />
         <option value="$PROJECT_DIR$/blog_app/static/styles/site.css" />
         <option value="$PROJECT_DIR$/blog_app/templates/blog_app/index.html" />
         <option value="$PROJECT_DIR$/blog_app/views.py" />
         <option value="$PROJECT_DIR$/blog_django/wsgi.py" />
         <option value="$PROJECT_DIR$/blog_django/settings.py" />
+        <option value="$PROJECT_DIR$/blog_app/static/functions/queries.py" />
       </list>
     </option>
   </component>
@@ -840,22 +840,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blog_app/static/functions/queries.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="39" column="4" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/blog_django/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
           <caret line="137" column="2" selection-start-line="137" selection-start-column="2" selection-end-line="137" selection-end-column="2" />
           <folding>
             <element signature="e#315#324#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog_app/static/functions/queries.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>

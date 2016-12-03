@@ -8,12 +8,21 @@ def get_archive():
     archive = []
 
     with connection.cursor() as cursor:
-        cursor.execute('SELECT strftime(\'%Y\', date_added) AS YEAR, '
-                       'strftime(\'%m\', date_added) AS MONTH, '
+        # postgres
+        cursor.execute('SELECT extract(year from date_added) AS YEAR, '
+                       'extract(month from date_added) AS MONTH, '
                        'COUNT(*) AS TOTAL '
                        'FROM blog_app_post '
                        'GROUP BY YEAR, MONTH '
                        'Order by YEAR DESC, MONTH')
+
+        # sql lite
+        # cursor.execute('SELECT strftime(\'%Y\', date_added) AS YEAR, '
+        #                'strftime(\'%m\', date_added) AS MONTH, '
+        #                'COUNT(*) AS TOTAL '
+        #                'FROM blog_app_post '
+        #                'GROUP BY YEAR, MONTH '
+        #                'Order by YEAR DESC, MONTH')
 
         years = set()
         year_node = ArchiveYearNode()
