@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
 import os
+import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -22,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '8_xbb^+1!5vq(efj6bipwog6om%08s56b6&$mq)+5iqb^n0ij9'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -122,3 +123,23 @@ STATIC_URL = '/static/'
 BOOTSTRAP3 = {
     'include_jquery': True
 }
+
+# Heroku settings - uncomment before pushing to Heroku
+
+DATABASES = {
+    'default': dj_database_url.config(default='postgres://localhost')
+}
+
+# Honor the 'X-Forwarded-Proto' header for request.is_secure()
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+# Allow all host headers
+ALLOWED_HOSTS = ['*']
+DEBUG = False
+
+# Static assests configuration
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles/')
+STATIC_FILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
