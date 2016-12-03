@@ -135,7 +135,7 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Allow all host headers
 ALLOWED_HOSTS = ['kiki-is-coding.herokuapp.com']
-DEBUG = False
+# DEBUG = False
 
 # Static assests configuration
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
