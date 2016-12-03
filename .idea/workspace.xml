@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7a41530-e0c7-4695-bc72-7ee324dbc0df" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog_app/templates/blog_app/base.html" afterPath="$PROJECT_DIR$/blog_app/templates/blog_app/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog_django/settings.py" afterPath="$PROJECT_DIR$/blog_django/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog_app/static/scripts/blog.js" afterPath="$PROJECT_DIR$/blog_app/static/scripts/blog.js" />
     </list>
     <ignored path="blog_django.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,17 +46,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="blog.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="blog.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/blog_app/static/scripts/blog.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="41" column="14" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
+            <state relative-caret-position="168">
+              <caret line="52" column="25" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blog_django/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="156">
@@ -158,7 +157,6 @@
         <option value="$PROJECT_DIR$/blog_app/templates/blog_app/latest_posts.html" />
         <option value="$PROJECT_DIR$/blog_app/templates/blog_app/archive_posts.html" />
         <option value="$PROJECT_DIR$/blog_app/templates/blog_app/archive.html" />
-        <option value="$PROJECT_DIR$/blog_app/static/scripts/blog.js" />
         <option value="$PROJECT_DIR$/blog_app/urls.py" />
         <option value="$PROJECT_DIR$/blog_app/forms.py" />
         <option value="$PROJECT_DIR$/blog_app/templates/blog_app/comments.html" />
@@ -171,6 +169,7 @@
         <option value="$PROJECT_DIR$/blog_app/static/functions/queries.py" />
         <option value="$PROJECT_DIR$/blog_app/templates/blog_app/base.html" />
         <option value="$PROJECT_DIR$/blog_django/settings.py" />
+        <option value="$PROJECT_DIR$/blog_app/static/scripts/blog.js" />
       </list>
     </option>
   </component>
@@ -958,14 +957,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blog_app/static/scripts/blog.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="41" column="14" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/blog_app/templates/blog_app/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -981,6 +972,14 @@
           <folding>
             <element signature="e#315#324#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog_app/static/scripts/blog.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="52" column="25" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>

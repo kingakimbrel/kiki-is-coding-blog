@@ -47,7 +47,10 @@ $(document).ready(function () {
         if (!form.valid()) {
             return;
         }
+
         event.preventDefault();
+
+        $('#submitComment').prop('disabled', true);
         $.ajax({
             url: "/add_new_comment/",
             type: 'POST',
